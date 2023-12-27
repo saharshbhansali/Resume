@@ -4,10 +4,11 @@ import { Badge } from "../components/ui/badge";
 import { CommandMenu } from "../components/command-menu";
 import { Metadata } from "next";
 import { Section } from "../components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { ArrowRight, GlobeIcon, MailIcon, MoveRight, PhoneIcon } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { RESUME_DATA } from "../data/resume-data";
 import { ProjectCard } from "../components/project-card";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -92,9 +93,11 @@ export default function Page() {
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
-        <div>
-          <a className="font-bold text-sm" href="https://rohankhatua.dev/resume.pdf">Get a PDF &rarr;</a>
-        </div>
+
+        <Button>
+          <a className="flex flex-row gap-2" href="https://rohankhatua.dev/resume.pdf">Get a PDF <MoveRight></MoveRight></a>
+        </Button>
+
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
