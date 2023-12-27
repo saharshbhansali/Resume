@@ -59,7 +59,7 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.social.map((social) => (
+              {RESUME_DATA.contact.socials.map((social) => (
                 <Button
                   key={social.name}
                   className="h-8 w-8"
@@ -91,6 +91,9 @@ export default function Page() {
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
+        </div>
+        <div>
+          <a className="font-bold text-sm" href="https://rohankhatua.dev/resume.pdf">Get a PDF &rarr;</a>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -188,10 +191,10 @@ export default function Page() {
       <CommandMenu
         links={[
           {
-            url: RESUME_DATA.personalWebsiteUrl,
+            url: RESUME_DATA.websiteUrl,
             title: "Personal Website",
           },
-          ...RESUME_DATA.contact.social.map((socilaMediaLink) => ({
+          ...RESUME_DATA.contact.socials.map((socilaMediaLink) => ({
             url: socilaMediaLink.url,
             title: socilaMediaLink.name,
           })),
