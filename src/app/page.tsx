@@ -10,9 +10,24 @@ import { RESUME_DATA } from "../data/resume-data";
 import { ProjectCard } from "../components/project-card";
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-};
+  title: "Rohan Khatua Resume",
+  description: "Rohan Khatua's Resume",
+  applicationName: "Rohan Khatua Portfolio",
+  keywords: ["Rohan", "Khatua", "Resume", "Rohan Khatua", "Rohan Khatua Resume"],
+  category: "Portfolio",
+  classification: "Portfolio",
+  creator: "Rohan Khatua",
+  robots: "index, follow",
+  abstract: "Rohan Khatua's Resume",
+  archives: "Rohan Khatua's Resume",
+  authors: {
+    name: "Rohan Khatua",
+    url: "https://www.linkedin.com/in/rohankhatua/",
+  },
+  colorScheme: "light",
+  themeColor: "#000000",
+}
+
 
 export default function Page() {
   return (

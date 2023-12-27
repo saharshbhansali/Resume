@@ -8,7 +8,7 @@ export const RESUME_DATA = {
   name: "Rohan Khatua",
   initials: "RK",
   location: "Bengaluru, India",
-  websiteUrl: "rohankhatua.dev",
+  websiteUrl: "https://rohankhatua.dev",
   locationLink: "https://maps.app.goo.gl/9mApkepVZDkmvLx89",
   about: "Pre-final year Computer Science Student - Full Stack Developer",
   summary: "I am a full-stack web developer who loves to explore different tech stacks combining various tools and technologies to create fun things. I love playing chess ♟️ and watching Formula 1 🏎️.",
