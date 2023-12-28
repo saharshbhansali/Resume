@@ -78,3 +78,11 @@
 .print-force-new-page {
   page-break-before: always;
 }
+
+.icon-transition {
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate-transition {
+  transition: transform 0.5s ease-in-out;
+}

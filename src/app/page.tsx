@@ -2,7 +2,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Card, CardHeader, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { CommandMenu } from "../components/command-menu";
-import { Metadata } from "next";
 import { Section } from "../components/ui/section";
 import { GlobeIcon, MailIcon, MoveRight, PhoneIcon } from "lucide-react";
 import { Button } from "../components/ui/button";
@@ -10,28 +9,11 @@ import { RESUME_DATA } from "../data/resume-data";
 import { ProjectCard } from "../components/project-card";
 import { ModeToggle } from "@/components/mode-toggle";
 
-export const metadata: Metadata = {
-  title: "Rohan Khatua Resume",
-  description: "Rohan Khatua's Resume",
-  applicationName: "Rohan Khatua Portfolio",
-  keywords: ["Rohan", "Khatua", "Resume", "Rohan Khatua", "Rohan Khatua Resume"],
-  category: "Portfolio",
-  classification: "Portfolio",
-  creator: "Rohan Khatua",
-  robots: "index, follow",
-  abstract: "Rohan Khatua's Resume",
-  archives: "Rohan Khatua's Resume",
-  authors: {
-    name: "Rohan Khatua",
-    url: "https://www.linkedin.com/in/rohankhatua/",
-  },
-}
-
-
 export default function Page() {
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -147,7 +129,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums">
                       {work.start} - {work.end}
                     </div>
                   </div>
@@ -173,7 +155,7 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums ">
                       {education.start} - {education.end}
                     </div>
                   </div>
@@ -187,7 +169,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+              return <Badge variant="outline" key={skill}>{skill}</Badge>;
             })}
           </div>
         </Section>
@@ -213,7 +195,8 @@ export default function Page() {
           {
             RESUME_DATA.certifications.map((cert: any) => {
               return (
-                <div className="flex items-center justify-between">
+
+                <div className="flex items-center justify-between" key={cert.label}>
                   <div className="flex items-center space-x-2">
 
                     <div className="text-gray-700 dark:text-gray-300 flex-grow">
@@ -228,9 +211,9 @@ export default function Page() {
               );
             })
           }
-
         </Section>
       </section>
+
 
       <CommandMenu
         links={[

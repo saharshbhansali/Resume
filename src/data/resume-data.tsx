@@ -71,7 +71,7 @@ export const RESUME_DATA = {
       techStack: [
         "Go", "GORM", "Go-Fiber", "PostgreSQL", "Docker"
       ],
-      description: "A REST API built entirely in Go for managing a bookstore handling inventory management, purchases and reviews",
+      description: "A REST API built entirely in Go for managing a bookstore handling inventory management, purchases and reviews.",
       logo: BookCheck,
       link: {
         label: "Github",
@@ -83,7 +83,7 @@ export const RESUME_DATA = {
       techStack: [
         "Vite", "React", "TypeScript"
       ],
-      description: "A customisable and responsive React component library for implementing a university timetable in your applications",
+      description: "A customisable and responsive React component library for implementing a university timetable in your applications.",
       logo: TableIcon,
       link: {
         label: "Github",
@@ -95,7 +95,7 @@ export const RESUME_DATA = {
       techStack: [
         "C#"
       ],
-      description: "A 1500 Elo [Average Human Strength] Chess Bot written in C# that communicates using the UCI protocol. It implements alpha-beta pruning for a minimax search",
+      description: "A 1500 Elo [Average Human Strength] Chess Bot written in C# that communicates using the UCI protocol. It implements alpha-beta pruning for a minimax search.",
       logo: "♟️",
       link: {
         label: "Github",
