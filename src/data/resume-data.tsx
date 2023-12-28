@@ -102,5 +102,27 @@ export const RESUME_DATA = {
         href: "https://github.com/RohanKhatua/Chess-Challenge"
       }
     }
+  ],
+  certifications: [
+    {
+      label: "AWS Certified Cloud Practitioner",
+      link: "https://www.credly.com/badges/e7a8043a-06ac-4e20-9b0c-0761da947048/public_url",
+      provider: "Amazon Web Services (AWS)"
+    },
+    {
+      label: "AWS Certified Solutions Architect - Associate",
+      link: "https://www.credly.com/badges/7da4bf38-d49e-46ec-b046-7e2722e42ba4/public_url",
+      provider: "Amazon Web Services (AWS)"
+    },
+    {
+      label: "Ethical Hacking",
+      link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS44S5490050504240968",
+      provider: "NPTEL"
+    },
+    {
+      label: "Python - 100 Days of Code",
+      link: "https://www.udemy.com/certificate/UC-6ae3624f-462f-4b61-be02-7edf79950a15/",
+      provider: "Udemy"
+    }
   ]
 }

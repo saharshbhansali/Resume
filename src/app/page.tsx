@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, MoveRight, PhoneIcon } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { RESUME_DATA } from "../data/resume-data";
 import { ProjectCard } from "../components/project-card";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export const metadata: Metadata = {
   title: "Rohan Khatua Resume",
@@ -24,8 +25,6 @@ export const metadata: Metadata = {
     name: "Rohan Khatua",
     url: "https://www.linkedin.com/in/rohankhatua/",
   },
-  colorScheme: "light",
-  themeColor: "#000000",
 }
 
 
@@ -108,9 +107,15 @@ export default function Page() {
           </Avatar>
         </div>
 
-        <Button>
-          <a className="flex flex-row gap-2" href="https://rohankhatua.dev/resume.pdf">Get a PDF <MoveRight></MoveRight></a>
-        </Button>
+        <div className="flex flex-row justify-between print:hidden">
+          <Button>
+            <a
+              className="flex flex-row gap-2 justify-center items-center"
+              href="https://rohankhatua.dev/resume.pdf">Get a PDF <MoveRight></MoveRight></a>
+          </Button>
+          <ModeToggle></ModeToggle>
+        </div>
+
 
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -187,7 +192,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
@@ -202,6 +207,28 @@ export default function Page() {
               );
             })}
           </div>
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Certifications</h2>
+          {
+            RESUME_DATA.certifications.map((cert: any) => {
+              return (
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+
+                    <div className="text-gray-700 dark:text-gray-300 flex-grow">
+                      <h3 className="font-semibold text-lg">{cert.label}</h3>
+                      <p className="text-sm">{cert.provider}</p>
+                    </div>
+                  </div>
+                  <a href={cert.link}>
+                    <Button variant="outline">View Details</Button>
+                  </a>
+                </div>
+              );
+            })
+          }
+
         </Section>
       </section>
 
