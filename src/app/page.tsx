@@ -8,6 +8,8 @@ import { Button } from "../components/ui/button";
 import { RESUME_DATA } from "../data/resume-data";
 import { ProjectCard } from "../components/project-card";
 import { ModeToggle } from "@/components/mode-toggle";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+
 
 export default function Page() {
 
@@ -16,7 +18,7 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className={`text-3xl font-extrabold`}>{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about}
             </p>
@@ -166,7 +168,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold">Technical Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge variant="outline" key={skill}>{skill}</Badge>;
@@ -190,22 +192,21 @@ export default function Page() {
             })}
           </div>
         </Section>
-        <Section>
+        <Section className="pb-5">
           <h2 className="text-xl font-bold">Certifications</h2>
           {
             RESUME_DATA.certifications.map((cert: any) => {
               return (
-
                 <div className="flex items-center justify-between" key={cert.label}>
-                  <div className="flex items-center space-x-2">
 
-                    <div className="text-gray-700 dark:text-gray-300 flex-grow">
-                      <h3 className="font-semibold text-lg">{cert.label}</h3>
-                      <p className="text-sm">{cert.provider}</p>
-                    </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-pretty">{cert.label}</h3>
+                    <p className="text-sm font-mono">{cert.provider}</p>
                   </div>
                   <a href={cert.link}>
-                    <Button variant="outline">View Details</Button>
+                    <Button variant="ghost" className="flex flex-row gap-2 justify-center items-center">View {' '}
+                      <ArrowTopRightIcon></ArrowTopRightIcon>
+                    </Button>
                   </a>
                 </div>
               );

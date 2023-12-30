@@ -38,7 +38,7 @@ export const RESUME_DATA = {
     {
       school: "Vellore Institute of Technology, Vellore",
       degree: "B.Tech - Computer Science and Engineering",
-      start: "Sep 2021",
+      start: "September 2021",
       end: "Present"
     },
     {
