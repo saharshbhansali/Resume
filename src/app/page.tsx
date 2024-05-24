@@ -10,11 +10,9 @@ import { ProjectCard } from "../components/project-card";
 import { ModeToggle } from "@/components/mode-toggle";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
-
 export default function Page() {
-
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -94,12 +92,14 @@ export default function Page() {
         <div className="flex flex-row justify-between print:hidden">
           <Button>
             <a
-              className="flex flex-row gap-2 justify-center items-center"
-              href="https://rohankhatua.dev/resume.pdf">Get a PDF <MoveRight></MoveRight></a>
+              className="flex flex-row items-center justify-center gap-2"
+              href="https://saharshbhansali.github.io/about-me/resume.pdf"
+            >
+              Get a PDF <MoveRight></MoveRight>
+            </a>
           </Button>
           <ModeToggle></ModeToggle>
         </div>
-
 
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -108,7 +108,7 @@ export default function Page() {
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-xl font-bold">Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -171,14 +171,18 @@ export default function Page() {
           <h2 className="text-xl font-bold">Technical Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge variant="outline" key={skill}>{skill}</Badge>;
+              return (
+                <Badge variant="outline" key={skill}>
+                  {skill}
+                </Badge>
+              );
             })}
           </div>
         </Section>
 
         <Section className="scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
@@ -194,27 +198,29 @@ export default function Page() {
         </Section>
         <Section className="pb-5">
           <h2 className="text-xl font-bold">Certifications</h2>
-          {
-            RESUME_DATA.certifications.map((cert: any) => {
-              return (
-                <div className="flex items-center justify-between" key={cert.label}>
-
-                  <div className="flex-grow">
-                    <h3 className="font-semibold text-pretty">{cert.label}</h3>
-                    <p className="text-sm font-mono">{cert.provider}</p>
-                  </div>
-                  <a href={cert.link}>
-                    <Button variant="ghost" className="flex flex-row gap-2 justify-center items-center">View {' '}
-                      <ArrowTopRightIcon></ArrowTopRightIcon>
-                    </Button>
-                  </a>
+          {RESUME_DATA.certifications.map((cert: any) => {
+            return (
+              <div
+                className="flex items-center justify-between"
+                key={cert.label}
+              >
+                <div className="flex-grow">
+                  <h3 className="text-pretty font-semibold">{cert.label}</h3>
+                  <p className="font-mono text-sm">{cert.provider}</p>
                 </div>
-              );
-            })
-          }
+                <a href={cert.link}>
+                  <Button
+                    variant="ghost"
+                    className="flex flex-row items-center justify-center gap-2"
+                  >
+                    View <ArrowTopRightIcon></ArrowTopRightIcon>
+                  </Button>
+                </a>
+              </div>
+            );
+          })}
         </Section>
       </section>
-
 
       <CommandMenu
         links={[

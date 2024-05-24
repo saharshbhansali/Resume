@@ -8,19 +8,19 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { GeistMonoNonVariable } from "geist/font/mono-non-variable";
 
 export const metadata: Metadata = {
-  title: "Rohan Khatua Resume",
-  description: "Rohan Khatua's Resume",
-  applicationName: "Rohan Khatua Portfolio",
-  keywords: ["Rohan", "Khatua", "Resume", "Rohan Khatua", "Rohan Khatua Resume"],
+  title: "Saharsh Bhansali Resume",
+  description: "Saharsh Bhansali's Resume",
+  applicationName: "Saharsh Bhansali Portfolio",
+  keywords: ["Saharsh", "Bhansali", "Resume", "Saharsh Bhansali", "Saharsh Bhansali Resume"],
   category: "Portfolio",
   classification: "Portfolio",
-  creator: "Rohan Khatua",
+  creator: "Saharsh Bhansali",
   robots: "index, follow",
-  abstract: "Rohan Khatua's Resume",
-  archives: "Rohan Khatua's Resume",
+  abstract: "Saharsh Bhansali's Resume",
+  archives: "Saharsh Bhansali's Resume",
   authors: {
-    name: "Rohan Khatua",
-    url: "https://www.linkedin.com/in/rohankhatua/",
+    name: "Saharsh Bhansali",
+    url: "https://www.linkedin.com/in/SaharshBhansali/",
   },
 }
 
