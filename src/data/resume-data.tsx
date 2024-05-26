@@ -11,8 +11,7 @@ export const RESUME_DATA = {
   websiteUrl: "https://saharshbhansali.github.io/about-me/",
   locationLink: "https://maps.app.goo.gl/mYLJ3uc9XPDu8KWk9",
   about: "Pre-final year Computer Science Student - Security Engineer",
-  summary:
-    "I am a cybersecurity enthusiast, constantly exploring cutting-edge tools and techniques to enhance digital protection. I love ricing my OS and playing CTFs.",
+  summary: "I am a cybersecurity entusiast, constantly exploring cutting-edge tools and techniques to enhance digital protection. I love ricing my OS and playing CTFs.",
   avatarUrl: "https://avatars.githubusercontent.com/saharshbhansali",
   contact: {
     email: "saharsh.bhansali15@gmail.com",
